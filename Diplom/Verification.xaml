@@ -1,0 +1,13 @@
+﻿<Window x:Class="Diplom.Verification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Получение доступа" Height="166" Width="412">
+    <Grid>
+        <Label Content="Идентификатор" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Результат сравнения" Height="28" HorizontalAlignment="Left" Margin="12,61,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,61,0,0" Name="textBox1" VerticalAlignment="Top" Width="236" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="123,12,0,0" Name="textBox2" VerticalAlignment="Top" Width="60" />
+        <Button Content="Сканирование" Height="23" HorizontalAlignment="Left" Margin="289,90,0,0" Name="button1" VerticalAlignment="Top" Width="89" Click="button1_Click" />
+        <Button Content="Вход" Height="23" HorizontalAlignment="Left" Margin="208,90,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click_1" />
+    </Grid>
+</Window>

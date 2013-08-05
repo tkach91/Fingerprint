@@ -1,0 +1,35 @@
+﻿<Window x:Class="Diplom.WorkerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сотрудник" Height="500" Width="627" ResizeMode="CanMinimize">
+    <Grid>
+        <Label Content="Фамилия" Height="25" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lblFamil" VerticalAlignment="Top" Width="60" />
+        <Label Content="Имя" Height="25" HorizontalAlignment="Left" Margin="10,39,0,0" Name="lblName" VerticalAlignment="Top" Width="60" />
+        <Label Content="Отчество" Height="25" HorizontalAlignment="Left" Margin="10,68,0,0" Name="lblSName" VerticalAlignment="Top" Width="60" />
+        <Label Content="Номер" Height="25" HorizontalAlignment="Left" Margin="12,125,0,0" Name="lblNumb" VerticalAlignment="Top" Width="60" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="83,13,0,0" Name="tBFamil" VerticalAlignment="Top" Width="343" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="83,42,0,0" Name="tBName" VerticalAlignment="Top" Width="343" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="83,71,0,0" Name="tBSName" VerticalAlignment="Top" Width="343" />
+        <TextBox Height="20" HorizontalAlignment="Left" Margin="83,130,0,0" Name="tBNumb" VerticalAlignment="Top" Width="96" IsReadOnly="True" IsEnabled="False" />
+        <Label Content="Должность" Height="25" HorizontalAlignment="Left" Margin="10,95,0,0" Name="lblPost" VerticalAlignment="Top" Width="71" />
+        <ComboBox Height="20" HorizontalAlignment="Left" Margin="83,100,0,0" Name="cBPost" VerticalAlignment="Top" Width="343" />
+        <Label Content="Отпечатки" Height="25" HorizontalAlignment="Left" Margin="12,156,0,0" Name="lblFingertips" VerticalAlignment="Top" Width="78" />
+        <Button Content="Добавить" Height="26" HorizontalAlignment="Left" Margin="10,427,0,0" Name="btnAddFing" VerticalAlignment="Top" Width="95" Click="btnAddFing_Click" />
+        <Button Content="Выбрать" Height="26" HorizontalAlignment="Right" Margin="0,427,12,0" Name="btnSelect" VerticalAlignment="Top" Width="95" Click="btnSelect_Click" />
+        <DataGrid 
+            AutoGenerateColumns="False" 
+            Height="234" 
+            HorizontalAlignment="Left" 
+            Margin="12,187,0,0" 
+            Name="dataGrid1" 
+            ItemsSource="{Binding}"
+            VerticalAlignment="Top" 
+            Width="581">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding m_id}" Header="ID" Width="40"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Название набора" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Date}" Header="Дата создания" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="Diplom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сотрудники" Height="500" Width="525" MinWidth="0" MinHeight="0" MaxWidth="Infinity" MaxHeight="Infinity" ResizeMode="CanMinimize">
+    <Grid>
+        <Menu Height="Auto" HorizontalAlignment="Stretch" Name="MainMenu" VerticalAlignment="Top" Margin="-2,0,0,0">
+            <MenuItem Header="Идентификация" Click="MenuItem_Click_1">
+            </MenuItem>            
+            <MenuItem Header="Справка">
+                <MenuItem Header="Должности"></MenuItem>
+                <MenuItem Header="Помещения"></MenuItem>
+                <MenuItem Header="Доступ"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid HorizontalAlignment="Left" Margin="0,27,0,0" Name="MainGrid" VerticalAlignment="Top" Width="503" Height="435">
+            <Label Content="Фамилия" Height="25" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lblFamil" VerticalAlignment="Top" Width="60" />
+            <Label Content="Имя" Height="25" HorizontalAlignment="Left" Margin="10,39,0,0" Name="lblName" VerticalAlignment="Top"  Width="60" />
+            <Label Content="Отчество" Height="25" HorizontalAlignment="Left" Margin="10,68,0,0" Name="lblSName" VerticalAlignment="Top"  Width="60" />
+            <Label Content="Номер" Height="25" HorizontalAlignment="Left" Margin="10,97,0,0" Name="lblNumb" VerticalAlignment="Top"  Width="60" />
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="83,13,0,0" Name="tBFamil" VerticalAlignment="Top" Width="220" />
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="83,42,0,0" Name="tBName" VerticalAlignment="Top" Width="220" />
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="83,71,0,0" Name="tBSName" VerticalAlignment="Top" Width="220" />
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="83,104,0,0" Name="tBNumb" VerticalAlignment="Top" Width="220" />
+            <Button Content="Должности" Height="25" HorizontalAlignment="Left" Margin="315,12,0,0" Name="btnPosts" VerticalAlignment="Top" Width="182" Click="btnPosts_Click" />
+            <Button Content="Помещения" Height="25" HorizontalAlignment="Left" Margin="315,42,0,0" Name="btnRooms" VerticalAlignment="Top" Width="182" Click="btnRooms_Click" />
+            <Button Content="Доступ" Height="25" HorizontalAlignment="Left" Margin="315,71,0,0" Name="btnAccess" VerticalAlignment="Top" Width="182" Click="btnAccess_Click" />
+            <Button Content="Поиск" Height="25" HorizontalAlignment="Left" Margin="10,141,0,0" Name="btnSearch" VerticalAlignment="Top" Width="293" Click="btnSearch_Click" />
+            <DataGrid 
+                AutoGenerateColumns="False" 
+                Height="210" 
+                HorizontalAlignment="Left" 
+                Margin="10,178,0,0" 
+                Name="dGRes" 
+                VerticalAlignment="Top" 
+                Width="487"
+                ItemsSource="{Binding}"
+                SelectionMode="Single" 
+                IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding e_id}" Header="ID" Width="40"/>
+                    <DataGridTextColumn Binding="{Binding LastName}" Header="Фамилия" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding FirstName}" Header="Имя" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding MiddleName}" Header="Отчество" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Должность" Width="180"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Добавить сотрудника" Height="25" HorizontalAlignment="Right" Margin="0,394,121,0" Name="btnAdd" VerticalAlignment="Top" Width="129" Click="btnAdd_Click" />
+            <Button Content="Выбрать" Height="25" HorizontalAlignment="Right" Margin="0,394,6,0" Name="btnSelect" VerticalAlignment="Top" Width="110" Click="btnSelect_Click" />
+        </Grid>
+    </Grid>
+</Window>

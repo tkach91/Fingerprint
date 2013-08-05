@@ -1,0 +1,54 @@
+﻿<Window x:Class="Diplom.AccessWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Доступ" Height="450" Width="915" ResizeMode="CanMinimize">
+    <Grid>
+        <Button Content="&lt;&lt; Добавить" Height="30" HorizontalAlignment="Left" Margin="524,149,0,0" Name="btnAdd" VerticalAlignment="Top" Width="105" Click="btnAdd_Click" />
+        <Button Content="Удалить &gt;&gt;" Height="30" HorizontalAlignment="Left" Margin="524,198,0,0" Name="btnDel" VerticalAlignment="Top" Width="105" Click="btnDel_Click" />
+        <DataGrid 
+            AutoGenerateColumns="False" 
+            Height="391" 
+            HorizontalAlignment="Left" 
+            Margin="12,10,0,0" 
+            Name="dataGridPosition" 
+            VerticalAlignment="Top" 
+            Width="242" 
+            ItemsSource="{Binding}"
+            SelectionMode="Single" 
+            IsReadOnly="True" SelectionChanged="dataGridPosition_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название должности" Binding="{Binding Name}" Width="*"/>
+            </DataGrid.Columns>    
+        </DataGrid>
+        <DataGrid 
+            AutoGenerateColumns="False" 
+            Height="391" 
+            HorizontalAlignment="Left" 
+            Margin="260,12,0,0" 
+            Name="dataGridAllLocations" 
+            VerticalAlignment="Top" 
+            Width="242"
+            ItemsSource="{Binding}"
+            SelectionMode="Single" 
+            IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Помещения для выбранной должности" Binding="{Binding Name}"  Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid 
+            AutoGenerateColumns="False" 
+            Height="391" 
+            HorizontalAlignment="Left" 
+            Margin="639,12,0,0" 
+            Name="dataGridLocation" 
+            VerticalAlignment="Top" 
+            Width="242" 
+            ItemsSource="{Binding}"
+            SelectionMode="Single" 
+            IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название помещения" Binding="{Binding Name}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

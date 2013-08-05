@@ -1,0 +1,14 @@
+﻿<Window x:Class="Diplom.MinutiaMapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="Карта Минюций" Height="587" Width="321" ResizeMode="CanMinimize">
+    <Grid>
+        <WindowsFormsHost Margin="10,10,12,93">
+            <wf:PictureBox x:Name="PB1" />
+        </WindowsFormsHost>
+        <Button Content="Создать карту минюций" Height="23" HorizontalAlignment="Right" Margin="0,474,12,0" Name="button2" VerticalAlignment="Top" Width="141" />
+        <Button Content="Сканировать" Height="23" HorizontalAlignment="Right" Margin="0,474,159,0" Name="button1" VerticalAlignment="Top" Width="130" Click="button1_Click" />
+        <Label Content="Карта минюций не создана" Height="28" HorizontalAlignment="Left" Margin="12,508,0,0" Name="lblStatus" VerticalAlignment="Top" Width="275" />
+    </Grid>
+</Window>

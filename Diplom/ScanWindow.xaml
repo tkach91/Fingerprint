@@ -1,0 +1,26 @@
+﻿<Window x:Class="Diplom.ScanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="Сканирование" ResizeMode="CanMinimize" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="536" Width="637">
+    <Grid>
+        <Button Content="Отмена" Height="20" HorizontalAlignment="Left" Margin="9,437,0,0" Name="btnCancle" VerticalAlignment="Top" Width="114" Click="btnCancle_Click" />
+        <Button Content="Сканировать" Height="20" HorizontalAlignment="Left" Margin="132,437,0,0" Name="btnScan" VerticalAlignment="Top" Width="114" Click="btnScan_Click" />
+        <Button Content="Принять" Height="20" HorizontalAlignment="Left" Margin="252,437,0,0" Name="btnAccept" VerticalAlignment="Top" Width="114" Click="btnAccept_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="13,465,0,0" Name="textBox1" VerticalAlignment="Top" Width="353" />
+        <WindowsFormsHost Margin="10,10,249,76">
+            <wf:PictureBox x:Name="PB1" />
+        </WindowsFormsHost>
+        <RadioButton Content="Левая рука - большой палец
+                     " Height="24" HorizontalAlignment="Left" Margin="398,21,0,0" Name="radioButton1" VerticalAlignment="Top" Width="207" />
+        <RadioButton Content="Левая рука - указательный палец" Height="24" HorizontalAlignment="Left" Margin="398,51,0,0" Name="radioButton2" VerticalAlignment="Top" Width="217" />
+        <RadioButton Content="Левая рука - средний палец" Height="24" HorizontalAlignment="Left" Margin="398,81,0,0" Name="radioButton3" VerticalAlignment="Top" Width="205" />
+        <RadioButton Content="Левая рука - безымянный палец" HorizontalAlignment="Left" Margin="398,111,0,362" Name="radioButton4" Width="205" />
+        <RadioButton Content="Левая рука - мизинец" Height="24" HorizontalAlignment="Left" Margin="398,141,0,0" Name="radioButton5" VerticalAlignment="Top" Width="207" />
+        <RadioButton Content="Правая рука - большой палец" Height="24" HorizontalAlignment="Left" Margin="398,181,0,0" Name="radioButton6" VerticalAlignment="Top" Width="205" />
+        <RadioButton Content="Правая рука - указательный палец" Height="24" HorizontalAlignment="Left" Margin="398,211,0,0" Name="radioButton7" VerticalAlignment="Top" Width="217" />
+        <RadioButton Content="Правая рука - средний палец" Height="24" HorizontalAlignment="Left" Margin="398,241,0,0" Name="radioButton8" VerticalAlignment="Top" Width="205" />
+        <RadioButton Content="Правая рука - безымянный палец" Height="24" HorizontalAlignment="Left" Margin="398,271,0,0" Name="radioButton9" VerticalAlignment="Top" Width="217" />
+        <RadioButton Content="Правая рука - мизинец" Height="24" HorizontalAlignment="Left" Margin="398,301,0,0" Name="radioButton10" VerticalAlignment="Top" Width="167" />
+    </Grid>
+</Window>
